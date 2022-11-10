@@ -1,6 +1,6 @@
 # NLP
 NLP project
-##1. Critical discussion about the datasets
+## 1. Critical discussion about the datasets
 
 There is a discrepancy in terms of classes with the rtmr test and training datasets having 5
 sentiment classification of 0,1,2,3, and 4, the s140 training set having only 2 sentiment
@@ -15,7 +15,7 @@ have a lot of imbalance, which <5% class 0, ~20% class 1, ~50% class 2, ~20% cla
 ~6% class 4. This imbalance requires fixing through sampling or weighting so machine learning
 models do not predict class 2 too often.
 
-##2. Description and justification of the data preparation steps used.
+## 2. Description and justification of the data preparation steps used.
 
 We first and foremost chose to limit the maximum number of observations used to 5000, which
 was applicable to both training sets. However, one issue arising was that the s140 training set
@@ -31,7 +31,7 @@ relevant analysis, separated words with hyphens into 2 words, changed every lett
 lowercase, and removed every symbol which was in the punctuation list. Finally, we stored the
 processed words and labels inside different variables to use again.
 
-##3. Description and justification of the text representation method(s) used.
+## 3. Description and justification of the text representation method(s) used.
 
 A self written tokenisation scheme for the Naive Bayes classifier, and using Tensorflow’s
 tokenization for the neural network part. For the Naive Bayes classifier, a count vectorizer was
@@ -45,7 +45,7 @@ specified length. Therefore each review is converted into a sequence of vectors.
 needed to be padded to the max length of the sentence in the training set. As these vectors
 form part of the network, they will be passed onto the next layer during training and inference.
 
-##4. Description and commentary on the machine learning architectures used.
+## 4. Description and commentary on the machine learning architectures used.
 
 Naive Bayes algorithm calculates the probability of a given output class using the prior,
 likelihood and evidence found in the data. It does this for each feature and each class and
@@ -61,7 +61,7 @@ LSTMs further allow this long range modeling through selectively remembering cer
 information and forgetting others. Convolutional neural networks enable weight sharing by
 moving a filter over the input to make a feature map.
 
-##5. Detailed performance evaluation of the developed machine learning models.
+## 5. Detailed performance evaluation of the developed machine learning models.
 
 By analyzing the confusion matrix, we can see that the model has learnt some signal. It predicts
 1 when the true label is 1. However the model tends to also predict 1 when the true label is 0
@@ -113,7 +113,7 @@ the bottom row 3. This means the model is predicting extremes too often when the
 mild sentiment there which could be from an imbalanced dataset. To fix this issue, it would be
 proposed to use more data.
 
-##6. Critical discussion on the achieved results, including potential limitations and usage
+## 6. Critical discussion on the achieved results, including potential limitations and usage
 instructions/suggestions.
 
 For the naive bayes models, words need to be tokenized in the same manner that was done in
