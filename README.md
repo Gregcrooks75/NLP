@@ -113,8 +113,7 @@ the bottom row 3. This means the model is predicting extremes too often when the
 mild sentiment there which could be from an imbalanced dataset. To fix this issue, it would be
 proposed to use more data.
 
-## 6. Critical discussion on the achieved results, including potential limitations and usage
-instructions/suggestions.
+## 6. Critical discussion on the achieved results, including potential limitations and usage instructions/suggestions.
 
 For the naive bayes models, words need to be tokenized in the same manner that was done in
 the data preprocessing. It is very important that each word corresponds to the same position in
