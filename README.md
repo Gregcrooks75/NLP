@@ -1,3 +1,5 @@
+## Summary
+
 This NLP project involves sentiment analysis on the rtmr and s140 datasets, each requiring preprocessing due to discrepancies in class balance and formats.
 
 Data preparation steps included sample size limitation, label adjustment, tokenization, stop-word removal, splitting hyphen-separated words, and lowercase conversion.
