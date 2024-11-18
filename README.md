@@ -1,4 +1,4 @@
-# Natural Language Processing (NLP) Project
+# Sentiment Analysis of Movie Reviews and Tweets Using Machine Learning Models
 
 This project focuses on sentiment analysis using various datasets and machine learning models to classify text data based on sentiment.
 
